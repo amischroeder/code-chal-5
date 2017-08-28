@@ -17,5 +17,7 @@ myApp.service('MessageService', ['$http', function($http) {
             self.getMessage();
         });
     };
+
+    self.getMessage();
     
 }]);

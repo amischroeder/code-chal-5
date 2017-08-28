@@ -7,7 +7,7 @@ myApp.controller('MessageController', ['MessageService', function(MessageService
     self.gottenMessages = MessageService.gottenMessages;
 
     self.addMessage = function() {
-        console.log('clicked to add newmessage');
+        console.log('clicked to add new message');
         MessageService.addMessage(self.newMessage);
     }
 
