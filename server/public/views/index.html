@@ -18,10 +18,9 @@
         <label for="message">Message: </label>
         <input type="text" ng-model="vm.newMessage.message" id="message" />
         <button class="btn btn-primary" ng-click="vm.addMessage()">Add</button>
-    </div>
-    <div ng-repeat="message in vm.gottenMessages.list">
-        <p>{{message.name}}</p>
-        <p> {{message.message}}</p>
+        <div ng-repeat="item in vm.gottenMessages.list">
+            {{item.name}} {{item.message}}
+        </div>
     </div>
 </body>
 
