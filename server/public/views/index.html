@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Challenge 5</title>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="/vendors/angular-route.js"></script> -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/message.controller.js"></script>
+    <script type="text/javascript" src="/scripts/services/message.service.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="MessageController as vm">
+        <h1>Code Challenge 5-Message App</h1>
+        <label for="name">Name: </label>
+        <input type="text" ng-model="vm.newMessage.name" id="name"/>
+        <label for="message">Message: </label>
+        <input type="text" ng-model="vm.newMessage.message" id="message"/>
+        <button class="btn btn-primary" ng-click="vm.addMessage()">Add</button>
+    </div>
+    <div ng-repeat="message in vm.gottenMessages.list">
+        <p>
+            {{message.name}}
+            {{message.message}}
+        </p>
+    </div>
+</body>
+
+</html>
